@@ -4,7 +4,8 @@ let tieCount = 0;
 
 function playRound() {
     function playerPlay() {             //get input from user and assign to variable - return
-        let playerSelection = prompt(/*"Round " + round + */": Rock paper scissors, 1-2-3! Type your choice:");
+        //let playerSelection = prompt(/*"Round " + round + */": Rock paper scissors, 1-2-3! Type your choice:");
+        let playerSelection = 
         console.log('You chose '+ playerSelection);
         return playerSelection;
         }
@@ -18,7 +19,6 @@ function playRound() {
         }
 
     const playerSelection = playerPlay();        //set playerSelection const
-    const computerSelection = computerPlay();    //set computerSelction const
                             
     function compare(playerSelection, computerSelection) {    //compare computer's choice with playe r's choice and print results  
             
@@ -79,9 +79,6 @@ function playRound() {
     getScore();
 }
 
-function getScore() {
-
-}
 
 
 function game() {          //loops round five times                                          //to-do:   //report winner at the end
