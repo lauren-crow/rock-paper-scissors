@@ -4,8 +4,7 @@ let tieCount = 0;
 
 function playRound() {
     function playerPlay() {             //get input from user and assign to variable - return
-        //let playerSelection = prompt(/*"Round " + round + */": Rock paper scissors, 1-2-3! Type your choice:");
-        let playerSelection = 
+        let playerSelection = prompt(/*"Round " + round + */": Rock paper scissors, 1-2-3! Type your choice:");
         console.log('You chose '+ playerSelection);
         return playerSelection;
         }
@@ -19,6 +18,7 @@ function playRound() {
         }
 
     const playerSelection = playerPlay();        //set playerSelection const
+    const computerSelection = computerPlay();        //set computerSelection const
                             
     function compare(playerSelection, computerSelection) {    //compare computer's choice with playe r's choice and print results  
             
@@ -105,25 +105,13 @@ function game() {          //loops round five times                             
 game();
 
 
-//output result of round (return)
-//output result of round (test with console.log)
 //compute overall game stats (return)
 
 //output result of game
 
-
-
-
-
-/*variables/functions from Odin:
-computerPlay() / playRound()
-game()
-playerSelction
-computerSelection
-*/
-
 /*To do:
-make repeated phrases into variables: tie message, win message, loss message, computer chose message
-make case sensitive
-throw error message if not rock paper or scissors*/
+make prompt not case sensitive
+throw error message if not rock paper or scissors
+optional: ui
+*/
 
