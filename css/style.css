@@ -1,0 +1,118 @@
+body {
+    text-align: center;
+    max-height: 100vh;
+}
+
+/*div {
+    border: solid 1px gray;
+}*/
+
+#title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+button{
+    height: 20vh;
+    width: 20vh;
+    background-color: lightblue;
+    margin: 1.5%;
+    border-radius: 10%;
+    outline:none;
+}
+
+button:hover {
+    background-color: hotpink;
+}
+
+#selections{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*border: red solid 1px;*/
+}
+
+#roundResult {
+    color: hotpink;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.selectionResult {
+    height: 25vh;
+    width: 25vh;
+    border-radius: 10%;
+    margin: 5%;
+    border: solid black 2px;
+    background-color: hsl(195, 53%, 96.5%)
+}
+
+#selections h4{
+    text-decoration: underline;
+}
+
+#selections img{
+    margin-top: 15%;
+}
+
+#score{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /*border: solid red 1px;*/
+}
+
+#youScore {
+    padding-right: 5%;
+}
+
+#computerScore {
+    padding-left: 5%;
+}
+
+#score h4{
+    width: 25vh;
+    margin: auto;
+    font-weight: bold;
+    /*border-radius: 20%;*/    
+    /*border: solid purple 2px;*/
+}
+
+.scoreBox {
+    width: 10%;
+    height: 60%;
+    color: hotpink;
+    font-size: 4em;
+    font-weight: bold;
+    /*border: solid 1px blue;*/
+    margin: auto;
+}
+
+@media only screen and (min-width: 860px) {
+    #selections{
+        margin-top: -3%;
+    }
+
+    #roundResult {
+        margin-top: -3%;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .buttons{
+        margin-top: 10%;
+    }
+  }

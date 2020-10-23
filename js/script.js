@@ -1,31 +1,79 @@
+//todo: center score, loop, restart game
+
+const buttons = document.querySelectorAll('button');
+const playerBox = document.querySelector('#player');
+const computerBox = document.querySelector('#computer');
+const roundResultBox = document.querySelector('#roundResult');
+const playerImg = document.querySelector('#playerImg');
+const computerImg = document.querySelector('#computerImg');
+const playerScoreBox = document.querySelector('#playerScoreBox');
+const computerScoreBox = document.querySelector('#computerScoreBox');
+const rockImg = "https://img.icons8.com/ios-filled/50/000000/rock.png";
+const paperImg = "https://img.icons8.com/ios/50/000000/paper-plane.png";
+const scissorsImg = "https://img.icons8.com/ios-filled/50/000000/cut.png";
+
+//if computer is winner change computerbox
+
 let playerScore = 0;    //initializes scores
 let computerScore = 0;
 let tieCount = 0;
 
-function playRound() {
-    function playerPlay() {             //get input from user and assign to variable - return
-        let playerSelection = prompt(/*"Round " + round + */": Rock paper scissors, 1-2-3! Type your choice:");
-        console.log('You chose '+ playerSelection);
-        return playerSelection;
-        }
+ //get input from user's button click and assign it to variable - return
+function playerPlay() {
+    buttons.forEach((button) => {
+        button.addEventListener('click', () =>  {
+            playRound(button.id);
+            const playerResult = document.createElement('div');
+            playerResult.textContent = (button.id);
+            //playerBox.appendChild(playerResult);
+            return button.id; 
+        });
+    });
+}
 
-    function computerPlay() {           //generate computer's choice and assign it to variable - return
-        let choiceArray = ["rock","paper","scissors"]                               //array of choices
-        let randomChoice = Math.floor(Math.random()*choiceArray.length);            //random choice of index
-        let computerSelection = choiceArray[randomChoice];                          // choose string associated with chosen index
-        console.log("The computer chose "+ computerSelection);
-        return computerSelection;
-        }
+//generate computer's random choice and return to later assign to variable
+function computerPlay() {       
+    let choiceArray = ["rock","paper","scissors"]                               //array of choices
+    let randomChoice = Math.floor(Math.random()*choiceArray.length);            //random choice of index
+    let computerSelection = choiceArray[randomChoice];                          // choose string associated with chosen index
+    //console.log("The computer chose "+ computerSelection);
+    const computerResult = document.createElement('div');
+    computerResult.textContent = (computerSelection);
+    //computerBox.appendChild(computerResult);
+    return computerSelection;
+    }
 
-    const playerSelection = playerPlay();        //set playerSelection const
-    const computerSelection = computerPlay();        //set computerSelection const
-                            
-    function compare(playerSelection, computerSelection) {    //compare computer's choice with playe r's choice and print results  
-            
+    const playerSelection = playerPlay();
+    const computerSelection = computerPlay(); 
+
+function showSelections(playerSelection, computerSelection){
+
+    if(playerSelection == 'rock'){
+        playerImg.src = rockImg;
+    }else if(playerSelection == 'paper'){
+        playerImg.src = paperImg;
+    }else if (playerSelection == 'scissors'){
+        playerImg.src = scissorsImg;
+    }
+
+    if(computerSelection == 'rock'){
+        computerImg.src = rockImg;
+    }else if(computerSelection == 'paper'){
+        computerImg.src = paperImg;
+    }else if (computerSelection == 'scissors'){
+        computerImg.src = scissorsImg;
+    }
+    
+}
+
+function playRound(playerSelection) {             //get input from user and assign to variable - return
+     
+    //compare computer's choice with playe r's choice and print results 
+    function compare(playerSelection, computerSelection) {     
         //set result variables    
         let tie = "    Tied round";      
-        let win = "   You win the round!";
-        let loss = "   Computer wins the round.";
+        let win = "   You won the round!";
+        let loss = "   Computer won the round.";
 
         if (playerSelection == computerSelection) {
             tieCount = tieCount +1; // add point to tie count
@@ -66,13 +114,17 @@ function playRound() {
         }
     }
 
+    showSelections(playerSelection, computerSelection);
+
     function getResult() {
         let result = compare(playerSelection, computerSelection);
-        console.log(result);
+        roundResultBox.innerHTML = result;
     }
 
     function getScore() {        
-        console.log("Your score: " + playerScore + " Computer score: " + computerScore + " Tie count: " + tieCount);
+        //console.log("Your score: " + playerScore + " Computer score: " + computerScore + " Tie count: " + tieCount);
+        playerScoreBox.innerHTML = playerScore;
+        computerScoreBox.innerHTML = computerScore;
     }
 
     getResult();
@@ -80,38 +132,11 @@ function playRound() {
 }
 
 
-
-function game() {          //loops round five times                                          //to-do:   //report winner at the end
-    for (let i = 0; i <= 4; i++) { //loop round * 5 for whole game
-
-        let round = i + 1;
-
-        playRound();
-
-    }
-
-    if (playerScore == computerScore) {
-        console.log("It's a draw");
-    }
-    else if (playerScore > computerScore) {
-        console.log("You win!!");
-    }
-    if (playerScore < computerScore) {
-        console.log("You lose, loser! The computer beat you.");
-    }
-}
+//playRound();
 
 
-game();
 
 
-//compute overall game stats (return)
 
-//output result of game
 
-/*To do:
-make prompt not case sensitive
-throw error message if not rock paper or scissors
-optional: ui
-*/
-
+//when user clicks button, triggers playRound() and provides playRound with returned id
