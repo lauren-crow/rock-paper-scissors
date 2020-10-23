@@ -1,4 +1,4 @@
-//todo: center score, loop, restart game
+//todo: loop & restart game, make responsive, thick border on winning selection result box
 
 const buttons = document.querySelectorAll('button');
 const playerBox = document.querySelector('#player');
@@ -43,8 +43,7 @@ function computerPlay() {
     return computerSelection;
     }
 
-    const playerSelection = playerPlay();
-    const computerSelection = computerPlay(); 
+    const playerSelection = playerPlay(); 
 
 function showSelections(playerSelection, computerSelection){
 
@@ -67,7 +66,7 @@ function showSelections(playerSelection, computerSelection){
 }
 
 function playRound(playerSelection) {             //get input from user and assign to variable - return
-     
+    const computerSelection = computerPlay();
     //compare computer's choice with playe r's choice and print results 
     function compare(playerSelection, computerSelection) {     
         //set result variables    

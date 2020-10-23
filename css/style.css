@@ -29,6 +29,7 @@ button{
 
 button:hover {
     background-color: hotpink;
+    background-color: hsl(195, 53%, 65%)
 }
 
 #selections{
@@ -100,6 +101,28 @@ button:hover {
     /*border: solid 1px blue;*/
     margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    button{
+        height: 15vh;
+        width: 15vh;
+    }
+
+    #roundResult {
+        margin-top: -3%;
+    }
+
+    .selectionResult {
+        height: 20vh;
+        width: 20vh;
+        
+    }
+
+    #selections h4{
+        font-size: 1em;
+    }
+
+  }
 
 @media only screen and (min-width: 860px) {
     #selections{
