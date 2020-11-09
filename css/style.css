@@ -1,105 +1,174 @@
 body {
     text-align: center;
     max-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 40vh 10vh 40vh;
+    /*border: solid 5px black;*/
 }
 
 /*div {
     border: solid 1px gray;
 }*/
 
-#title {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
 .buttons {
-    margin-top: 20%;
-    margin-bottom: 5%;
+    width: 60vh;
+    height: 15vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    position: absolute;
+    /*border: solid 4px yellow;*/
 }
 
 button{
-    height: 20vh;
-    width: 20vh;
+    height: 15vh;
+    width: 15vh;
     background-color: lightblue;
     margin: 1.5%;
     border-radius: 10%;
-    outline:none;
+    position: relative;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.stars img {
+    width: 10px;
+    height: 10px;
 }
 
 button:hover {
-    background-color: hotpink;
-    background-color: hsl(195, 53%, 65%)
-}
-
-#selections{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*border: red solid 1px;*/
+    /*background-color: hotpink;*/
+    background-color: hsl(195, 53%, 65%);
 }
 
 #roundResult {
     color: hotpink;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
-    margin-bottom: 2%;
+    height: 10vh;
+    width: 100vh;
+    top: 60vh;
+    position: absolute;
+    margin-bottom: -2%;
+    margin-top: 2%;
+    /*border: orange solid 2px;*/
+}
+
+#selections{
+    width: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: absolute;
+    top: 30vh;
+    /*border: red solid 4px;*/
 }
 
 .selectionResult {
     height: 25vh;
     width: 25vh;
     border-radius: 10%;
-    margin: 5%;
-    border: solid black 2px;
-    background-color: hsl(195, 53%, 96.5%)
+    margin: 2% 3% 2% 3%;
+    /*border: solid black 1px;*/
+    /*border: solid rgb(224, 222, 222) 1px;*/
+    background-color: hsl(195, 53%, 97%);
 }
 
 #selections h4{
     text-decoration: underline;
+    font-size: 0.75em;;
 }
 
 #selections img{
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
-#score{
-    width: 80%;
+#scoreBox{
+    width: 100vh;
     height: 20vh;
-    margin: auto;
+    /*margin: 0 auto;*/
     text-align: center;
     display: flex;
     justify-content: center;
-    /*border: solid red 1px;*/
+    position: absolute;
+    top: 70vh;
+    padding: -5vh;
+    margin-top: 1vh;
+    /*border: solid purple 4px;*/
 }
 
 #youScore {
-    padding-right: 5%;
+    padding-right: 10%;
+    /*border: solid orange 2px;*/
 }
 
 #computerScore {
-    padding-left: 5%;
+    padding-left: 18%;
+    /*border: solid orange 2px;*/
 }
 
-#score h4{
+#scoreBox h4{
     width: 25vh;
-    margin: auto;
     font-weight: bold;
+    margin: 0vh;
     /*border-radius: 20%;*/    
-    /*border: solid purple 2px;*/
+    /*border: solid green 4px;*/
 }
 
-.scoreBox {
-    width: 10%;
+.score {
+    margin-top: -1.5vh;
     height: 60%;
     color: hotpink;
     font-size: 4em;
     font-weight: bold;
     /*border: solid 1px blue;*/
-    margin: auto;
+}
+
+#resetBtn {
+    right: 40vh;
+    top: -55vh;
+    font-size: 0.5em;
+    height: 7vh;
+    position: absolute;
+}
+
+.stars {
+    position: absolute;
+    height: 5vh;
+    width: 5vh;
+    top: 37vh;
+}
+
+#playerWon {
+    left: 15vh;
+}
+
+#computerWon {
+    right: 15vh;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .buttons {
+        width:80vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+    body{
+        padding: 10vh 30vh 10vh 30vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .buttons {
+        width:80vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -108,23 +177,32 @@ button:hover {
         width: 15vh;
     }
 
-    #roundResult {
-        margin-top: -3%;
+    body {
+        padding: 10vh 20vh 10vh 20vh;
     }
 
+    /*.buttons {
+        margin-top: 5%;
+        /*margin-bottom: 5%;*/
+   /* }*/
+
+    /*#roundResult {
+        margin-top: -3%;
+    }*/
+
     .selectionResult {
-        height: 20vh;
-        width: 20vh;
+        height: 25vh;
+        width: 25vh;
         
     }
 
     #selections h4{
-        font-size: 1em;
+        font-size: 0.6em;
     }
 
   }
 
-@media only screen and (min-width: 860px) {
+/*@media only screen and (min-width: 860px) {
     #selections{
         margin-top: -3%;
     }
@@ -136,6 +214,6 @@ button:hover {
 
   @media only screen and (min-width: 1000px) {
     .buttons{
-        margin-top: 10%;
+        margin-top: 5%;
     }
-  }
+  }*/
