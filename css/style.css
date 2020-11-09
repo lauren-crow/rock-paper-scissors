@@ -5,6 +5,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10vh 40vh 10vh 40vh;
+    font-family: Arial, Helvetica, sans-serif;
     /*border: solid 5px black;*/
 }
 
@@ -46,12 +47,12 @@ button:hover {
 }
 
 #roundResult {
-    color: hsl(195, 53%, 65%);
+    color: black;
     font-size: 1em;
     font-weight: bold;
     height: 10vh;
     width: 100vh;
-    top: 60vh;
+    top: 75vh;
     position: absolute;
     margin-bottom: -2%;
     margin-top: 2%;
@@ -64,7 +65,7 @@ button:hover {
     flex-wrap: nowrap;
     justify-content: center;
     position: absolute;
-    top: 30vh;
+    top: 32vh;
     /*border: red solid 4px;*/
 }
 
@@ -95,23 +96,24 @@ button:hover {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 70vh;
+    top: 60vh;
     padding: -5vh;
     margin-top: 1vh;
     /*border: solid purple 4px;*/
 }
 
 #youScore {
-    padding-right: 1%;
+    padding-right: 9%;
     /*border: solid orange 2px;*/
 }
 
 #computerScore {
-    padding-left: 5%;
+    padding-left: 18%;
     /*border: solid orange 2px;*/
 }
 
 #scoreBox h4{
+    color: hsl(195, 53%, 65%);
     width: 25vh;
     font-weight: bold;
     margin: 0vh;
@@ -120,36 +122,23 @@ button:hover {
 }
 
 .score {
-    margin-top: -1.5vh;
+    margin-top: 0vh;
     height: 60%;
     color: hsl(195, 53%, 65%);
-    font-size: 4em;
+    font-size: 2em;
     font-weight: bold;
     /*border: solid 1px blue;*/
 }
 
 #resetBtn {
     right: 40vh;
-    top: -55vh;
-    font-size: 0.5em;
+    top: -45vh;
+    font-size: 0.6em;
     height: 7vh;
+    width: 18vh;
     position: absolute;
 }
 
-.stars {
-    position: absolute;
-    height: 5vh;
-    width: 5vh;
-    top: 37vh;
-}
-
-#playerWon {
-    left: 15vh;
-}
-
-#computerWon {
-    right: 15vh;
-}
 
 
 @media only screen and (max-width: 1000px) {

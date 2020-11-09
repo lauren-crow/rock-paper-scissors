@@ -15,7 +15,6 @@ const computerWon = document.querySelector('#computerWon');
 const rockImg = "rock.png";
 const paperImg = "paper.png";
 const scissorsImg = "scissors.png";
-const starsImg = "stars.png";
 
 //if computer is winner change computerbox
 
@@ -125,6 +124,7 @@ function playRound(playerSelection) {             //get input from user and assi
         break;
         case 'win':
             playerBox.style.border = ('solid hsl(195, 53%, 65%) 1px');
+            playerBox.style.fontWeight = ('bold');
             computerBox.style.border = ('none');
             playerScore = playerScore + 1;
             roundMessage = "   You won the round!";
@@ -132,6 +132,7 @@ function playRound(playerSelection) {             //get input from user and assi
         case 'loss':
             computerScore = computerScore + 1;  // add point to computerPoint
             computerBox.style.border = ('solid hsl(195, 53%, 65%) 1px');
+            computerBox.style.fontWeight = ('bold');
             playerBox.style.border = ('none');
             roundMessage = "   The computer won the round.";
         break;
@@ -151,13 +152,9 @@ function playRound(playerSelection) {             //get input from user and assi
             if(computerScore == 5){
                 roundMessage = "Sorry, the computer won this time.";
                 computerBox.style.backgroundColor= ('yellow');
-                computerWon.style.visibility = "visible";
-                computerWon.src = starsImg;
             }else if(playerScore == 5){
                 roundMessage = "You won the game!!";
                 playerBox.style.backgroundColor = ('yellow');
-                playerWon.style.visibility = "visible";
-                playerWon.src = starsImg;
             } 
 
             resetButton.addEventListener('click', () =>  {
@@ -166,8 +163,6 @@ function playRound(playerSelection) {             //get input from user and assi
                 scoreBox.style.visibility = "hidden";
                 resetButton.style.visibility = "hidden";
                 roundResultBox.style.visibility = "hidden";
-                playerWon.style.visibility = "hidden";
-                computerWon.style.visibility = "hidden";
                 playerBox.style.backgroundColor = ('hsl(195, 53%, 97%)');
                 computerBox.style.backgroundColor = ('hsl(195, 53%, 97%)');
                 computerScore = 0;
