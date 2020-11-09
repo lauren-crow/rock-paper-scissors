@@ -31,6 +31,7 @@ function playerPlay() {
         button.addEventListener('click', () =>  {
             selectionBox.style.visibility = "visible";
             scoreBox.style.visibility = "visible";
+            roundResultBox.style.visibility = "visible";
             playRound(button.id);
             const playerResult = document.createElement('div');
             playerResult.textContent = (button.id);
@@ -146,14 +147,16 @@ function playRound(playerSelection) {             //get input from user and assi
             resetButton.textContent = "Play Again";
             scoreBox.appendChild(resetButton);
             document.querySelector('.buttons').style.visibility = "hidden";
-            
+
             if(computerScore == 5){
                 roundMessage = "Sorry, the computer won this time.";
                 computerBox.style.backgroundColor= ('yellow');
+                computerWon.style.visibility = "visible";
                 computerWon.src = starsImg;
             }else if(playerScore == 5){
                 roundMessage = "You won the game!!";
                 playerBox.style.backgroundColor = ('yellow');
+                playerWon.style.visibility = "visible";
                 playerWon.src = starsImg;
             } 
 
