@@ -46,7 +46,7 @@ button:hover {
 }
 
 #roundResult {
-    color: hotpink;
+    color: hsl(195, 53%, 65%);
     font-size: 1em;
     font-weight: bold;
     height: 10vh;
@@ -102,12 +102,12 @@ button:hover {
 }
 
 #youScore {
-    padding-right: 10%;
+    padding-right: 1%;
     /*border: solid orange 2px;*/
 }
 
 #computerScore {
-    padding-left: 18%;
+    padding-left: 5%;
     /*border: solid orange 2px;*/
 }
 
@@ -122,7 +122,7 @@ button:hover {
 .score {
     margin-top: -1.5vh;
     height: 60%;
-    color: hotpink;
+    color: hsl(195, 53%, 65%);
     font-size: 4em;
     font-weight: bold;
     /*border: solid 1px blue;*/

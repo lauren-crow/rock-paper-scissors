@@ -124,14 +124,14 @@ function playRound(playerSelection) {             //get input from user and assi
             //border box to show winner
         break;
         case 'win':
-            playerBox.style.border = ('solid hotpink 1px');
+            playerBox.style.border = ('solid hsl(195, 53%, 65%) 1px');
             computerBox.style.border = ('none');
             playerScore = playerScore + 1;
             roundMessage = "   You won the round!";
         break;
         case 'loss':
             computerScore = computerScore + 1;  // add point to computerPoint
-            computerBox.style.border = ('solid hotpink 1px');
+            computerBox.style.border = ('solid hsl(195, 53%, 65%) 1px');
             playerBox.style.border = ('none');
             roundMessage = "   The computer won the round.";
         break;
