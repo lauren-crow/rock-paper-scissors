@@ -23,11 +23,9 @@
 
 <div id="scoreBox">
     <div id="youScore">
-        <!--<h4>You</h4>-->
         <div class="score" id="playerScoreBox"></div>
     </div>
     <div id="computerScore">
-        <!--<h4>Computer</h4>-->
         <div class="score" id="computerScoreBox"></div>
     </div>
 </div>

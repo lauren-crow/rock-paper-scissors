@@ -10,15 +10,11 @@ const computerImg = document.querySelector('#computerImg');
 const scoreBox = document.querySelector('#scoreBox');
 const playerScoreBox = document.querySelector('#playerScoreBox');
 const computerScoreBox = document.querySelector('#computerScoreBox');
-const playerWon = document.querySelector('#playerWon');
-const computerWon = document.querySelector('#computerWon');
 const rockImg = "rock.png";
 const paperImg = "paper.png";
 const scissorsImg = "scissors.png";
 
-//if computer is winner change computerbox
-
-let playerScore = 0;    //initializes scores
+let playerScore = 0;    //initialize scores
 let computerScore = 0;
 let tieCount = 0;
 selectionBox.style.visibility = "hidden";
@@ -73,9 +69,9 @@ function showSelections(playerSelection, computerSelection){
     
 }
 
-function playRound(playerSelection) {             //get input from user and assign to variable - return
+function playRound(playerSelection) {    //get input from user and assign to variable - return
     const computerSelection = computerPlay();
-    //compare computer's choice with playe r's choice and print results 
+    //compare computer's choice with player's choice and print results 
     function compare(playerSelection, computerSelection) {    
 
         if (playerSelection == computerSelection) {
@@ -107,9 +103,6 @@ function playRound(playerSelection) {             //get input from user and assi
         return result;
     }
     result = compare(playerSelection, computerSelection);
-    //console.log(`playerSelection = ${playerSelection}`);
-    //console.log(`computerSelection = ${computerSelection}`);
-    //console.log(`result = ${result}`);
 
     //shows round result message and tallies score  
     switch(result){ 
@@ -118,9 +111,6 @@ function playRound(playerSelection) {             //get input from user and assi
             computerBox.style.border = ('none');
             tieCount = tieCount +1;
             roundMessage = "    Tied round"; 
-            //tally score
-            //display round result message
-            //border box to show winner
         break;
         case 'win':
             playerBox.style.border = ('solid hsl(195, 53%, 65%) 1px');
@@ -157,6 +147,7 @@ function playRound(playerSelection) {             //get input from user and assi
                 playerBox.style.backgroundColor = ('yellow');
             } 
 
+            //'Play again' / reset button resets scores to zero and hides all elements except original 3 buttons ( rock paper and scissors)
             resetButton.addEventListener('click', () =>  {
                 document.querySelector('.buttons').style.visibility = "visible";
                 selectionBox.style.visibility = "hidden";

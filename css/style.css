@@ -6,12 +6,7 @@ body {
     justify-content: center;
     padding: 10vh 40vh 10vh 40vh;
     font-family: Arial, Helvetica, sans-serif;
-    /*border: solid 5px black;*/
 }
-
-/*div {
-    border: solid 1px gray;
-}*/
 
 .buttons {
     width: 60vh;
@@ -19,7 +14,6 @@ body {
     margin-left: 20vh;
     margin-right: 20vh;
     position: absolute;
-    /*border: solid 4px yellow;*/
 }
 
 button{
@@ -32,32 +26,14 @@ button{
 }
 
 img {
-    width: 20px;
-    height: 20px;
-}
-
-.stars img {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 button:hover {
-    /*background-color: hotpink;*/
     background-color: hsl(195, 53%, 65%);
 }
 
-#roundResult {
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    height: 10vh;
-    width: 100vh;
-    top: 75vh;
-    position: absolute;
-    margin-bottom: -2%;
-    margin-top: 2%;
-    /*border: orange solid 2px;*/
-}
 
 #selections{
     width: 100vh;
@@ -66,16 +42,12 @@ button:hover {
     justify-content: center;
     position: absolute;
     top: 32vh;
-    /*border: red solid 4px;*/
 }
 
 .selectionResult {
     height: 25vh;
     width: 25vh;
-    border-radius: 10%;
     margin: 2% 3% 2% 3%;
-    /*border: solid black 1px;*/
-    /*border: solid rgb(224, 222, 222) 1px;*/
     background-color: hsl(195, 53%, 97%);
 }
 
@@ -91,7 +63,6 @@ button:hover {
 #scoreBox{
     width: 100vh;
     height: 20vh;
-    /*margin: 0 auto;*/
     text-align: center;
     display: flex;
     justify-content: center;
@@ -99,26 +70,14 @@ button:hover {
     top: 60vh;
     padding: -5vh;
     margin-top: 1vh;
-    /*border: solid purple 4px;*/
 }
 
 #youScore {
     padding-right: 9%;
-    /*border: solid orange 2px;*/
 }
 
 #computerScore {
     padding-left: 18%;
-    /*border: solid orange 2px;*/
-}
-
-#scoreBox h4{
-    color: hsl(195, 53%, 65%);
-    width: 25vh;
-    font-weight: bold;
-    margin: 0vh;
-    /*border-radius: 20%;*/    
-    /*border: solid green 4px;*/
 }
 
 .score {
@@ -127,8 +86,19 @@ button:hover {
     color: hsl(195, 53%, 65%);
     font-size: 2em;
     font-weight: bold;
-    /*border: solid 1px blue;*/
 }
+
+#roundResult {
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    height: 10vh;
+    width: 100vh;
+    top: 75vh;
+    position: absolute;
+    margin-bottom: -2%;
+    margin-top: 2%;
+}s
 
 #resetBtn {
     right: 40vh;
@@ -170,15 +140,6 @@ button:hover {
         padding: 10vh 20vh 10vh 20vh;
     }
 
-    /*.buttons {
-        margin-top: 5%;
-        /*margin-bottom: 5%;*/
-   /* }*/
-
-    /*#roundResult {
-        margin-top: -3%;
-    }*/
-
     .selectionResult {
         height: 25vh;
         width: 25vh;
@@ -190,19 +151,3 @@ button:hover {
     }
 
   }
-
-/*@media only screen and (min-width: 860px) {
-    #selections{
-        margin-top: -3%;
-    }
-
-    #roundResult {
-        margin-top: -3%;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .buttons{
-        margin-top: 5%;
-    }
-  }*/
