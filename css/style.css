@@ -73,15 +73,15 @@ button:hover {
 }
 
 #youScore {
-    padding-right: 9%;
+    padding-right: 10%;
 }
 
 #computerScore {
-    padding-left: 18%;
+    padding-left: 19%;
 }
 
 .score {
-    margin-top: 0vh;
+    margin-top: -12vh;
     height: 60%;
     color: hsl(195, 53%, 65%);
     font-size: 2em;
@@ -94,16 +94,16 @@ button:hover {
     font-weight: bold;
     height: 10vh;
     width: 100vh;
-    top: 75vh;
+    top: 65vh;
     position: absolute;
     margin-bottom: -2%;
     margin-top: 2%;
-}s
+}
 
 #resetBtn {
     right: 40vh;
     top: -45vh;
-    font-size: 0.6em;
+    font-size: 1em;
     height: 7vh;
     width: 18vh;
     position: absolute;
